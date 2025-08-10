@@ -1,16 +1,6 @@
-import os
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask
 
-# Create Flask app
-app = Flask(__name__)
-
-# Configure database from Render's DATABASE_URL
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# Initialize SQLAlchemy
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
 class Perfume(db.Model):
     __tablename__ = "perfumes"
