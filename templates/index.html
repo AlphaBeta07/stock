@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume Stock Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container py-4">
+    <h1 class="text-center mb-4">Perfume Stock Manager</h1>
+
+    <div class="card shadow p-4 mb-4">
+        <h4>Add Perfume</h4>
+        <div class="row g-2">
+            <div class="col-md-4">
+                <input id="name" class="form-control" placeholder="Perfume Name">
+            </div>
+            <div class="col-md-3">
+                <select id="category" class="form-control">
+                    <option value="Premium Perfume">Premium Perfume</option>
+                    <option value="Premium Medium Perfume">Premium Medium Perfume</option>
+                    <option value="Regular Perfume">Regular Perfume</option>
+                    <option value="Car Perfume">Car Perfume</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input id="price" type="number" step="0.01" class="form-control" placeholder="Price">
+            </div>
+            <div class="col-md-2">
+                <input id="quantity" type="number" class="form-control" placeholder="Quantity">
+            </div>
+            <div class="col-md-1 d-grid">
+                <button id="addBtn" onclick="addPerfume()" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tablesContainer"></div>
+
+    <div class="text-center mt-4">
+        <button onclick="getTotal()" class="btn btn-success px-4">Show Total Stock Value</button>
+        <p id="totalValue" class="mt-3 fw-bold"></p>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
